@@ -1,3 +1,4 @@
+
 --1
 select employees.emp_no,
 employees.last_name,
@@ -52,7 +53,8 @@ from employees
 	on employees.emp_no=dept_emp.emp_no
 	inner join departments
 	on dept_emp.dept_no=departments.dept_no
-	where dept_name = 'Sales';
+	where dept_name = 'Sales'
+	;
 
 --7
 select employees.emp_no,
@@ -69,5 +71,5 @@ from employees
 --8
 select last_name, count(*) from employees
 group by last_name
-order by count desc;
+order by count(last_name) desc;
 
